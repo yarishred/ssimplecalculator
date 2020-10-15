@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #f3f3f3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapperCalc {
+  width: 400px;
+  height: auto;
+  background-color: #f3f3f3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.wrapperCalc .resultDisplay {
+  width: 100%;
+  height: 80px;
+  background-color: #333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -0.5px -0.5px 13px #333;
+  font-size: 3rem;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 80px;
+  outline:none;
+  border:none;
+  color: inherit
+}
+
+.grid-cont {
+  width: 100%;
+  height: auto;
+  display: grid;
+  background-color: teal;
+  padding: 30px;
+  margin-top: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: -0.5px -0.5px 13px #333;
+}
+
+.grid-cont .grid-elements input {
+  width: 60px;
+  height: 60px;
+  border:none;
+  border-radius: 50%;
+  background-color: #333;
+  color:inherit;
+  outline: none;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1.8rem;
+  box-shadow: 3px 3px 4px rgb(31, 31, 31), -1.5px -1.5px 2px #777777;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.grid-cont .grid-elements input[value='=']{
+  width: 60px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  border-radius: 50px;
+  background-color: tomato;
+}
+.grid-cont .grid-elements[data-sign="float"] {
+  width: 60px;
+  grid-row-start: 4;
+  grid-column-start: 3;
+  border-radius: 50px;
+}
+
+.grid-cont .grid-elements[data-sign="+"] {
+  width: 60px;
+  grid-row-start: 1;
+  grid-column-start: 4;
+  border-radius: 50px;
+}
+.grid-cont .grid-elements[data-sign="-"] {
+  width: 60px;
+  grid-row-start: 2;
+  grid-column-start: 4;
+  border-radius: 50px;
+}
+.grid-cont .grid-elements[data-sign="x"] {
+  width: 60px;
+  grid-row-start: 3;
+  grid-column-start: 4;
+  border-radius: 50px;
+}
+.grid-cont .grid-elements[data-sign="÷"] {
+  width: 60px;
+  grid-row-start: 4;
+  grid-column-start: 4;
+  border-radius: 50px;
+}
